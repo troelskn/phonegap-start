@@ -6,14 +6,14 @@
         id        = "dk.rainmaking.Testbed"
         version   = "1.0.1">
 
-    <name>Pashgap</name>
+    <name>Testbed</name>
 
     <description>
-	Pash on Phonegap
+	My first app on Phonegap
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://rainmaking.dk" email="tkn@rainmaking.dk">
+        Troels Knak-Nielsen
     </author>
 
     <!--
