@@ -27,7 +27,7 @@ var App = {
 				    position: 'left',
 				    width: Math.round(document.body.clientWidth * (4/5)),
 				    threshold: 40,
-            overlap: 6
+            overlap: 0
 			  });
     },
     // Bind Event Listeners
