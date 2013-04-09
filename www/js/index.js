@@ -16,27 +16,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+var App = {
+    // Application Constructor
     initialize: function() {
-        this.bind();
+        this.bindEvents();
+        // Create an instance of Meny
+			  var meny = Meny.create({
+				    menuElement: document.getElementById('menu'),
+				    contentsElement: document.getElementById('content'),
+				    position: 'left',
+				    width: Math.round(document.body.clientWidth * (4/5)),
+				    threshold: 40,
+            overlap: 6
+			  });
     },
-    bind: function() {
-        document.addEventListener('deviceready', this.deviceready, false);
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        //document.addEventListener('deviceready', function() { App.onDeviceReady(); }, false);
+        document.addEventListener('DOMContentLoaded', function() { App.onDeviceReady(); }, false);
+        $("#show-details").click(function() { App.showPage("details"); });
+        $("#show-main").click(function() { App.showPage("main"); });
     },
-    deviceready: function() {
-        // This is an event handler function, which means the scope is the event.
-        // So, we must explicitly called `app.report()` instead of `this.report()`.
-        app.report('deviceready');
+    // deviceready Event Handler
+    onDeviceReady: function() {
+        this.showPage("main");
     },
-    report: function(id) {
-        // Report the event in the console
-        console.log("Report: " + id);
-
-        // Toggle the state from "pending" to "complete" for the reported ID.
-        // Accomplished by adding .hide to the pending element and removing
-        // .hide from the complete element.
-        document.querySelector('#' + id + ' .pending').className += ' hide';
-        var completeElem = document.querySelector('#' + id + ' .complete');
-        completeElem.className = completeElem.className.split('hide').join('');
+    showPage: function(id) {
+        $(".page.visible").filter(function(e) { return e.id != id; }).removeClass("visible");
+        $("#" + id).addClass("visible");
     }
 };

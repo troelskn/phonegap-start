@@ -18,25 +18,36 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Testbed</h1>
-            <div id="deviceready">
-                <p class="status pending blink">Connecting to Device</p>
-                <p class="status complete blink hide">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>
+  </head>
+  <body>
+    <div id="menu">
+      <a href="#">Lorem ipsum</a>
+      <a href="#">Lorem ipsum</a>
+      <a href="#">Lorem ipsum</a>
+    </div>
+    <div id="content">
+      <div class="page" id="main">
+        <h1>Why, hello there!</h1>
+        <p><button id="show-details">Show details</button></p>
+      </div>
+      <div class="page" id="details">
+        <h1>This is the details page</h1>
+        <p><button id="show-main">Show main</button></p>
+      </div>
+    </div>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="underscore-1.4.4.js"></script>
+    <script type="text/javascript" src="meny-1.2.0.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      App.initialize();
+    </script>
+  </body>
 </html>
